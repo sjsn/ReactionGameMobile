@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="notificationBarColor">#7fc6db</color>
+    <color name="titleColor">#659EAF</color>
+    <color name="colorAccent">#7fc6db</color>
+    <color name="instrTitleColor">#FF0000</color>
+    <color name="startColor">#FFFFFF</color>
+    <color name="buttonBG">#44a4ee</color>
+</resources>

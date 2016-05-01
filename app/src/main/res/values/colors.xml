@@ -4,6 +4,9 @@
     <color name="titleColor">#659EAF</color>
     <color name="colorAccent">#7fc6db</color>
     <color name="instrTitleColor">#FF0000</color>
+    <color name="loss_message_color">#FF0000</color>
     <color name="startColor">#FFFFFF</color>
     <color name="buttonBG">#44a4ee</color>
+    <color name="optionBG">#FFFFFF</color>
+    <color name="go_message">#149014</color>
 </resources>

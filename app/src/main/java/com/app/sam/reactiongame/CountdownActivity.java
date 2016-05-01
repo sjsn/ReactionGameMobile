@@ -28,16 +28,17 @@ public class CountdownActivity extends AppCompatActivity {
         new CountDownTimer(4000, 100) {
 
             public void onTick(long millisUntilFinished) {
+                int sec = (int) millisUntilFinished / 1000;
                 if (millisUntilFinished <= 1000) {
-                    countText.setText("Go!");
+                    countText.setTextColor(getColor(R.color.go_message));
+                    countText.setText(getString(R.string.countdown_go));
                 } else {
-                    countText.setText("" + millisUntilFinished / 1000);
+                    countText.setText(getString(R.string.countdown, sec));
                 }
             }
 
             public void onFinish() {
                 countText.setText("");
-                countText.setVisibility(View.INVISIBLE);
                 Intent intent = new Intent(getApplicationContext(), GameActivity.class);
                 startActivity(intent);
             }

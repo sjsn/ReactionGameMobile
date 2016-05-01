@@ -33,7 +33,7 @@
                 android:id="@+id/option2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/white"
+                android:background="@color/optionBG"
                 android:layout_weight="1.0"
                 android:text="Button3" />
 
@@ -41,7 +41,7 @@
                 android:id="@+id/option1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/white"
+                android:background="@color/optionBG"
                 android:layout_weight="1.0"
                 android:text="Button4" />
         </LinearLayout>
@@ -57,7 +57,7 @@
                 android:id="@+id/option4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/white"
+                android:background="@color/optionBG"
                 android:layout_weight="1.0"
                 android:text="Button1" />
 
@@ -65,7 +65,7 @@
                 android:id="@+id/option3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/white"
+                android:background="@color/optionBG"
                 android:layout_weight="1.0"
                 android:text="Button2" />
         </LinearLayout>

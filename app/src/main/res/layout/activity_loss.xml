@@ -69,4 +69,16 @@
         android:layout_alignParentRight="false"
         android:layout_alignParentEnd="false"
         android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/new_record"
+        android:id="@+id/new_record"
+        android:textColor="@color/new_record"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" />
 </RelativeLayout>

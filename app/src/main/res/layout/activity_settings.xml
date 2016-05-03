@@ -12,6 +12,24 @@
         android:layout_height="wrap_content"
         android:text="@string/reset_stats"
         android:id="@+id/reset_stats"
+        android:background="@color/reset_stats_bg"
+        android:textColor="@color/reset_stats_text"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/clear_message"
+        android:id="@+id/clear_message"
+        android:textSize="35sp"
+        android:visibility="invisible"
+        android:textColor="@color/clear_message"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:gravity="center" />
 </RelativeLayout>

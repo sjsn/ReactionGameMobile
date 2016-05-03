@@ -9,17 +9,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.text.DecimalFormat;
-
 public class LossActivity extends AppCompatActivity {
 
     int points;
-    int time;
+    double time;
     double avgTime;
 
     TextView totalPoints;
     TextView totalTime;
     TextView avgTimeView;
+    TextView newRecord;
     Button retry;
 
     private static final String MYPREFS = "rec_prefs";
@@ -37,33 +36,26 @@ public class LossActivity extends AppCompatActivity {
             Bundle data = getIntent().getExtras();
             if (data == null) {
                 points = 0;
-                time = 0;
+                time = 0.0;
             } else {
                 points = data.getInt("points");
-                time = data.getInt("totalTime");
+                time = data.getDouble("totalTime");
             }
         } else {
             points = (int) savedInstanceState.getSerializable("points");
-            time = (int) savedInstanceState.getSerializable("totalTime");
+            time = (double) savedInstanceState.getSerializable("totalTime");
         }
         time = time / 1000;
-        // Converts the avgerage time to 3 decimal places (points/sec)
-        avgTime = Math.floor(((double) time / points) * 100) / 100;
+        avgTime = Math.floor(((time / points) * 100)) / 100;
         SharedPreferences stats = getSharedPreferences(MYPREFS, Context.MODE_PRIVATE);
         SharedPreferences.Editor statsEditor = stats.edit();
         int currentHighScore = stats.getInt("high_score", 0);
-        int currentLongestTime = stats.getInt("longest_time", 0);
-        long currentAvg = stats.getLong("high_average", 0);
         if (points > currentHighScore) {
             statsEditor.putInt("high_score", points);
-            statsEditor.apply();
-        }
-        if (time > currentLongestTime) {
-            statsEditor.putInt("longest_time", time);
-            statsEditor.apply();
-        }
-        if (avgTime > currentAvg) {
-            statsEditor.putLong("high_average", currentAvg);
+            statsEditor.putString("longest_time", String.format("%.2f", time));
+            statsEditor.putString("high_average", String.format("%.2f", avgTime));
+            newRecord = (TextView) findViewById(R.id.new_record);
+            newRecord.setVisibility(View.VISIBLE);
             statsEditor.apply();
         }
     }
@@ -74,7 +66,7 @@ public class LossActivity extends AppCompatActivity {
         totalTime = (TextView) findViewById(R.id.total_time);
         avgTimeView = (TextView) findViewById(R.id.avg_time);
         totalPoints.setText(getString(R.string.points_message, points));
-        totalTime.setText(getString(R.string.time_message, time));
+        totalTime.setText(getString(R.string.time_message, String.format("%.2f", time)));
         avgTimeView.setText(getString(R.string.avg_time_message, String.format("%.2f", avgTime)));
         retry.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

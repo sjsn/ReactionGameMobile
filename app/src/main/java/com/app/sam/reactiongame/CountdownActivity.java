@@ -1,6 +1,8 @@
 package com.app.sam.reactiongame;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +29,7 @@ public class CountdownActivity extends AppCompatActivity {
 
         new CountDownTimer(4000, 100) {
 
+            @TargetApi(Build.VERSION_CODES.M)
             public void onTick(long millisUntilFinished) {
                 int sec = (int) millisUntilFinished / 1000;
                 if (millisUntilFinished <= 1000) {

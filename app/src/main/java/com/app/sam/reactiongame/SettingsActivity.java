@@ -1,12 +1,12 @@
 package com.app.sam.reactiongame;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -36,10 +36,11 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 statsEditor.putInt("high_score", 0);
-                statsEditor.putInt("longest_time", 0);
+                statsEditor.putString("longest_time", "0.00");
+                statsEditor.putString("high_average", "0.00");
                 statsEditor.apply();
-                Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
-                startActivity(intent);
+                TextView clearMessage = (TextView) findViewById(R.id.clear_message);
+                clearMessage.setVisibility(View.VISIBLE);
             }
         });
     }

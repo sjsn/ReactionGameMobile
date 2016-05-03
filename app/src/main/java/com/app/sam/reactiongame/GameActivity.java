@@ -150,7 +150,7 @@ public class GameActivity extends AppCompatActivity {
     private void gameLoss() {
         Intent intent = new Intent(getApplicationContext(), LossActivity.class);
         intent.putExtra("points", points);
-        intent.putExtra("totalTime", totalTime);
+        intent.putExtra("totalTime", (double) totalTime);
         startActivity(intent);
     }
 }

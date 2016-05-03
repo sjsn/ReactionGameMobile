@@ -14,13 +14,28 @@
     <string name="title_activity_about">About</string>
     <string name="title_activity_records">Records</string>
     <string name="settings_header_sound">Sounds</string>
+
     <string name="lossMessage">You lose!</string>
     <string name="retry">Play Again!</string>
     <string name="points_message">Total Points: %1$d</string>
     <string name="time_message">Total Time: %1$d seconds</string>
+    <string name="avg_time_message">Average: %1$s points/sec</string>
+
     <string name="countdown">%1$d</string>
     <string name="countdown_go">Go!</string>
     <string name="about_text">Created by Sam San Nicolas</string>
+    <string name="reset_stats">Reset Stats</string>
+
+    <string name="high_points_title">Most Points:</string>
+    <string name="high_points">%1$d points</string>
+    <string name="high_avg_title">Best Average:</string>
+    <string name="high_avg">%1$s sec/point</string>
+    <string name="high_time_title">Longest Time:</string>
+    <string name="high_time">%1$d seconds</string>
+
+    <!-- Shared Preferences Values -->
+    <string name="high_score">0</string>
+    <string name="longest_time">0</string>
 
     <!-- Strings related to Settings -->
 

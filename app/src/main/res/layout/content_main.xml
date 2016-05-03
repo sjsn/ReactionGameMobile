@@ -20,7 +20,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginBottom="20dp"
-        android:textSize="30dp" />
+        android:textSize="40sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
         android:text="@string/instructions"
         android:id="@+id/instrText"
         android:textAlignment="center"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_below="@+id/instrTitle"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

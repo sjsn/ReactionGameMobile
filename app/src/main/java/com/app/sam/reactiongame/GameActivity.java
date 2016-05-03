@@ -96,6 +96,9 @@ public class GameActivity extends AppCompatActivity {
                         timerAction.cancel();
                         totalTime += (int) time;
                         time = 0;
+                        if (timeOut > 1250) {
+                            timeOut -= 250;
+                        }
                         points++;
                         startGame(chooseColors(), chooseColors());
                     }
@@ -107,6 +110,9 @@ public class GameActivity extends AppCompatActivity {
                         timerAction.cancel();
                         totalTime += (int) time;
                         time = 0;
+                        if (timeOut > 1250) {
+                            timeOut -= 250;
+                        }
                         points++;
                         startGame(chooseColors(), chooseColors());
                     }
@@ -116,6 +122,7 @@ public class GameActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         timerAction.cancel();
                         time = 0;
+                        timeOut = 4000;
                         gameLoss();
                     }
                 });
@@ -130,6 +137,8 @@ public class GameActivity extends AppCompatActivity {
                 time += interval;
                 if (time >= timeOut) {
                     this.cancel();
+                    time = 0;
+                    timeOut = 4000;
                     gameLoss();
                 }
             }

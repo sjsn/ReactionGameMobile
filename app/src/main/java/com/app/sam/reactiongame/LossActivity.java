@@ -1,20 +1,28 @@
 package com.app.sam.reactiongame;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class LossActivity extends AppCompatActivity {
 
     int points;
     int time;
+    double avgTime;
 
     TextView totalPoints;
     TextView totalTime;
+    TextView avgTimeView;
     Button retry;
+
+    private static final String MYPREFS = "rec_prefs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +47,35 @@ public class LossActivity extends AppCompatActivity {
             time = (int) savedInstanceState.getSerializable("totalTime");
         }
         time = time / 1000;
+        // Converts the avgerage time to 3 decimal places (points/sec)
+        avgTime = Math.floor(((double) time / points) * 100) / 100;
+        SharedPreferences stats = getSharedPreferences(MYPREFS, Context.MODE_PRIVATE);
+        SharedPreferences.Editor statsEditor = stats.edit();
+        int currentHighScore = stats.getInt("high_score", 0);
+        int currentLongestTime = stats.getInt("longest_time", 0);
+        long currentAvg = stats.getLong("high_average", 0);
+        if (points > currentHighScore) {
+            statsEditor.putInt("high_score", points);
+            statsEditor.apply();
+        }
+        if (time > currentLongestTime) {
+            statsEditor.putInt("longest_time", time);
+            statsEditor.apply();
+        }
+        if (avgTime > currentAvg) {
+            statsEditor.putLong("high_average", currentAvg);
+            statsEditor.apply();
+        }
     }
 
     private void displayData() {
         retry = (Button) findViewById(R.id.retry);
-        totalPoints = (TextView) findViewById(R.id.totalPoints);
-        totalTime = (TextView) findViewById(R.id.totalTime);
+        totalPoints = (TextView) findViewById(R.id.total_points);
+        totalTime = (TextView) findViewById(R.id.total_time);
+        avgTimeView = (TextView) findViewById(R.id.avg_time);
         totalPoints.setText(getString(R.string.points_message, points));
         totalTime.setText(getString(R.string.time_message, time));
+        avgTimeView.setText(getString(R.string.avg_time_message, String.format("%.2f", avgTime)));
         retry.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CountdownActivity.class);

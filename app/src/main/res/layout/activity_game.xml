@@ -34,7 +34,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/optionBG"
+                android:textAllCaps="false"
                 android:layout_weight="1.0"
+                android:textSize="20sp"
                 android:text="Button3" />
 
             <Button
@@ -42,7 +44,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/optionBG"
+                android:textAllCaps="false"
                 android:layout_weight="1.0"
+                android:textSize="20sp"
                 android:text="Button4" />
         </LinearLayout>
 
@@ -58,7 +62,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/optionBG"
+                android:textAllCaps="false"
                 android:layout_weight="1.0"
+                android:textSize="20sp"
                 android:text="Button1" />
 
             <Button
@@ -66,7 +72,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/optionBG"
+                android:textAllCaps="false"
                 android:layout_weight="1.0"
+                android:textSize="20sp"
                 android:text="Button2" />
         </LinearLayout>
     </LinearLayout>

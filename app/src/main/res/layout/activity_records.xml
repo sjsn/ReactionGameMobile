@@ -7,4 +7,74 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.app.sam.reactiongame.RecordsActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/high_points"
+        android:textSize="25sp"
+        android:textColor="@color/records_value_color"
+        android:id="@+id/high_points"
+        android:layout_below="@+id/high_points_title"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/high_avg"
+        android:textSize="25sp"
+        android:textColor="@color/records_value_color"
+        android:id="@+id/high_avg"
+        android:layout_below="@+id/high_avg_title"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/high_time"
+        android:textSize="25sp"
+        android:textColor="@color/records_value_color"
+        android:id="@+id/high_time"
+        android:layout_below="@+id/high_time_title"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/high_points_title"
+        android:textSize="30sp"
+        android:textColor="@color/records_title_color"
+        android:id="@+id/high_points_title"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/high_avg_title"
+        android:textSize="30sp"
+        android:textColor="@color/records_title_color"
+        android:id="@+id/high_avg_title"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/high_points"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:layout_alignRight="@+id/high_points_title"
+        android:layout_alignEnd="@+id/high_points_title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/high_time_title"
+        android:textSize="30sp"
+        android:textColor="@color/records_title_color"
+        android:id="@+id/high_time_title"
+        android:layout_below="@+id/high_avg"
+        android:layout_alignStart="@+id/high_avg_title"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal" />
+
 </RelativeLayout>

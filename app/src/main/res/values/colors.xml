@@ -9,4 +9,7 @@
     <color name="buttonBG">#44a4ee</color>
     <color name="optionBG">#FFFFFF</color>
     <color name="go_message">#149014</color>
+
+    <color name="records_value_color">#FF0000</color>
+    <color name="records_title_color">#80766a</color>
 </resources>

@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lossMessage"
-        android:id="@+id/lossMessage"
+        android:id="@+id/loss_message"
         android:textSize="50sp"
         android:textColor="@color/loss_message_color"
         android:layout_alignParentTop="true"
@@ -19,25 +19,28 @@
         android:layout_marginTop="47dp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/totalPoints"
+        android:id="@+id/total_points"
+        android:text="@string/points_message"
         android:textSize="20sp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="82dp"
         android:layout_alignParentTop="false"
-        android:layout_alignParentEnd="false"
-        android:layout_alignTop="@+id/lossMessage" />
+        android:layout_alignTop="@+id/loss_message"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/totalTime"
+        android:id="@+id/total_time"
+        android:text="@string/time_message"
         android:textSize="20sp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/totalPoints"
+        android:gravity="center"
+        android:layout_below="@+id/total_points"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
         android:layout_marginTop="5dp" />
 
     <Button
@@ -53,4 +56,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="84dp"
         android:padding="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/avg_time_message"
+        android:id="@+id/avg_time"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/total_time"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false"
+        android:gravity="center" />
 </RelativeLayout>

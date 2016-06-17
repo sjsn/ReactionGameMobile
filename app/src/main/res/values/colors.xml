@@ -13,6 +13,9 @@
     <color name="clear_message">#149014</color>
     <color name="reset_stats_bg">#FF0000</color>
     <color name="reset_stats_text">#FFFFFF</color>
+    <color name="view_history_color">#f0e130</color>
+    <color name="history_title">#FF0000</color>
+    <color name="history_header">#000000</color>
 
     <color name="records_value_color">#FF0000</color>
     <color name="records_title_color">#80766a</color>

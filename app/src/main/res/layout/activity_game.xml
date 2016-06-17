@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/instr_text"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:gravity="center" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,35 +31,7 @@
 
             android:orientation="horizontal">
             <Button
-                android:id="@+id/option2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/optionBG"
-                android:textAllCaps="false"
-                android:layout_weight="1.0"
-                android:textSize="20sp"
-                android:text="Button3" />
-
-            <Button
                 android:id="@+id/option1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/optionBG"
-                android:textAllCaps="false"
-                android:layout_weight="1.0"
-                android:textSize="20sp"
-                android:text="Button4" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/row2"
-            android:orientation="horizontal"
-            android:layout_alignTop="@+id/instr_text">
-
-            <Button
-                android:id="@+id/option4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/optionBG"
@@ -75,7 +48,35 @@
                 android:textAllCaps="false"
                 android:layout_weight="1.0"
                 android:textSize="20sp"
+                android:text="Button3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/row2"
+            android:orientation="horizontal"
+            android:layout_alignTop="@+id/instr_text">
+
+            <Button
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/optionBG"
+                android:textAllCaps="false"
+                android:layout_weight="1.0"
+                android:textSize="20sp"
                 android:text="Button2" />
+
+            <Button
+                android:id="@+id/option4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/optionBG"
+                android:textAllCaps="false"
+                android:layout_weight="1.0"
+                android:textSize="20sp"
+                android:text="Button4" />
         </LinearLayout>
     </LinearLayout>
 

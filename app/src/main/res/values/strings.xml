@@ -20,8 +20,9 @@
     <string name="retry">Play Again!</string>
     <string name="points_message">Total Points: %1$d</string>
     <string name="time_message">Total Time: %1$s seconds</string>
-    <string name="avg_time_message">Average: %1$s sec/point</string>
+    <string name="avg_time_message">Average Time: %1$s seconds</string>
     <string name="new_record">New Record!</string>
+    <string name="view_history">View Game</string>
 
     <string name="countdown">%1$d</string>
     <string name="countdown_go">Go!</string>
@@ -34,6 +35,12 @@
     <string name="high_avg">%1$s sec/point</string>
     <string name="high_time_title">Longest Time:</string>
     <string name="high_time">%1$s seconds</string>
+
+    <string name="history_title">Previous Game</string>
+    <string name="history_times">%1$s sec</string>
+    <string name="history_q">Press the: </string>
+    <string name="history_a">You pressed: </string>
+    <string name="history_t">Time: </string>
 
     <!-- Shared Preferences Values -->
     <string name="high_score">0</string>
@@ -96,4 +103,7 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

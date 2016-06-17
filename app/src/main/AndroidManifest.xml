@@ -37,9 +37,15 @@
             android:label="Statistics"
             android:parentActivityName=".MainActivity" >
         </activity>
-        <activity android:name=".AboutActivity"
+        <activity
+            android:name=".AboutActivity"
             android:label="About"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".GameHistoryActivity"
+            android:label="Statistics"
+            android:parentActivityName=".LossActivity">
         </activity>
     </application>
 

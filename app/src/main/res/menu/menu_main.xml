@@ -12,11 +12,11 @@
         android:id="@+id/action_records"
         android:title="@string/title_activity_records"
         android:orderInCategory="1"
-        android:showAsAction="never" />
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/action_about"
         android:title="@string/title_activity_about"
         android:orderInCategory="3"
-        android:showAsAction="never" />
+        app:showAsAction="never" />
 </menu>

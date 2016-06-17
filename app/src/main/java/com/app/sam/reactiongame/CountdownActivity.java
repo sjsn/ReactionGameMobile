@@ -12,12 +12,18 @@ import android.widget.TextView;
 public class CountdownActivity extends AppCompatActivity {
 
     TextView countText;
+    CountDownTimer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_countdown);
         startCountdown();
+    }
+
+    @Override
+    public void onBackPressed() {
+        return;
     }
 
     /*
@@ -27,7 +33,7 @@ public class CountdownActivity extends AppCompatActivity {
         countText = (TextView) findViewById(R.id.countdown_text_view);
         countText.setVisibility(View.VISIBLE);
 
-        new CountDownTimer(4000, 100) {
+        timer = new CountDownTimer(4000, 100) {
 
             @TargetApi(Build.VERSION_CODES.M)
             public void onTick(long millisUntilFinished) {
@@ -44,6 +50,8 @@ public class CountdownActivity extends AppCompatActivity {
                 countText.setText("");
                 Intent intent = new Intent(getApplicationContext(), GameActivity.class);
                 startActivity(intent);
+                timer = null;
+                finish();
             }
         }.start();
     }
